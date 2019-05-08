@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML to PDF</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <style>
+      body{
+        font-family: 'Roboto', sans-serif;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        height: 100%;
+      }
+      td {
+        border: 1px solid #000;
+        text-align: left;
+        padding: 8px 8px;
+        vertical-align: top;
+        width: 50%;
+      }
+      td ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .header {
+        border: #000 1px solid;
+        text-align: right;
+      }
+      .header h1 {
+        margin: 5px;
+      }
+      .title {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 0.8em;
+      }
+      .fieldTitle,
+      .fieldValue {
+        padding: 0;
+        margin: 0;
+      }
+      .fieldTitle {
+        min-height: 10%;
+        font-weight: 600;
+      }
+      .fieldValue {
+        background-color: rgb(213, 221, 243);
+        min-height: 90%;
+        padding: 10px;
+      }
+      .innecCol {
+        width: 46%;
+        float: left;
+        margin: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+	content of this area will be the content of your PDF file 
+	-->
+    <div class="HTMLtoPDF">
+      <div class="header">
+        <h1>LITHIUM CELLS OR BATTERIES TEST SUMMARY</h1>
+        <h1>IN ACCORDANCE WITH SUB-SECTION 38.3</h1>
+        <h1>OF MANUAL OF TESTS AND CRITERIA</h1>
+      </div>
+      <h1 class="title">BATTERY TRANSPORTATION INFORMATION</h1>
+      <table>
+        <tr>
+          <td>
+            <div class="fieldTitle">
+              Name of cell, battery or product manufacturer, as applicable:
+            </div>
+            <div class="fieldValue">
+              <ul>
+                <li>Item Number: 411TESTCELL001</li>
+                <li>Item Name: AB-Cell</li>
+                <li>Item Description: Power Source Assembly</li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <div class="fieldTitle">
+              Cell, battery or product manufacturer’s contact information to
+              include address, phone number, email address and website for more
+              information:
+            </div>
+            <div class="fieldValue">
+              <ul>
+                <li>Lithium Battery Manufacturer</li>
+                <li>6800 Test Battery Lane</li>
+                <li>Testville, State ZIP</li>
+                <li>USA</li>
+                <li>+1-555-555-1234</li>
+                <li>e-mail@testbattery.com</li>
+                <li>www.testbattery.com</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">
+            <div class="fieldTitle">
+              Name of the test laboratory to include address, phone number,
+              email address and website for more information:
+            </div>
+            <div class="fieldValue">
+              <ul>
+                <li>Lithium Battery Manufacturer</li>
+                <li>6800 Test Battery Lane</li>
+                <li>Testville, State ZIP</li>
+                <li>USA</li>
+                <li>+1-555-555-1234</li>
+                <li>e-mail@testbattery.com</li>
+                <li>www.testbattery.com</li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <td>
+                  <div class="fieldTitle">
+                    Unique test report identification number:
+                  </div>
+                  <div class="fieldValue">
+                    XYZ123
+                  </div>
+                </td>
+                <td>
+                  <div class="fieldTitle">
+                    Date of the test report:
+                  </div>
+                  <div class="fieldValue">
+                    01-Aug-2013
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="innecCol"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="fieldTitle">
+              List of tests conducted and results (i.e., pass/fail):
+            </div>
+            <div class="fieldValue">
+              <ul>
+                <li>Lithium Battery Manufacturer</li>
+                <li>6800 Test Battery Lane</li>
+                <li>Testville, State ZIP</li>
+                <li>USA</li>
+                <li>+1-555-555-1234</li>
+                <li>e-mail@testbattery.com</li>
+                <li>www.testbattery.com</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <tfoot>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    
+  </body>
+</html>

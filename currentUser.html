@@ -1,0 +1,65 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    getCurrentUser();
+  });
+  function getCurrentUser() {
+    getUserWebPermissionREST();
+    $.ajax({
+      url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/CurrentUser",
+      method: "GET",
+      headers: { Accept: "application/json; odata=verbose" },
+      success: function(data) {
+        getCurrentUserGroupColl(data.d.Id);
+      },
+      error: function(data) {
+        failure(data);
+      }
+    });
+  }
+  function getCurrentUserGroupColl(UserID) {
+    $.ajax({
+      url:
+        _spPageContextInfo.webAbsoluteUrl +
+        "/_api/web/GetUserById(" +
+        UserID +
+        ")/Groups",
+      method: "GET",
+      headers: { Accept: "application/json; odata=verbose" },
+      success: function(data) {
+        /* get all group's title of current user. */
+        var results = data.d.results;
+        var InnrHtmlgrp = " <ul>";
+        for (var i = 0; i < results.length; i++) {
+          InnrHtmlgrp += "<li>" + results[i].Title + "</li>";
+        }
+        $("#Group").append(InnrHtmlgrp + " </ul>");
+      }
+    });
+  }
+
+  function getCurrentUserGroupColl(UserID) {
+    $.ajax({
+      url:
+        _spPageContextInfo.webAbsoluteUrl +
+        "/_api/web/GetUserById(" +
+        UserID +
+        ")/Groups",
+      method: "GET",
+      headers: { Accept: "application/json; odata=verbose" },
+      success: function(data) {
+        /* get all group's title of current user. */
+
+        var results = data.d.results;
+        var InnrHtmlgrp = "<ul>";
+        for (var i = 0; i < results.length; i++) {
+          InnrHtmlgrp += "<li>" + results[i].Title + "</li>";
+        }
+        $("#userGroup").append(InnrHtmlgrp + "</ul>");
+      }
+    });
+  }
+</script>
+<strong>security Group Name:</strong>
+<div id="Group"></div>
+<div id="userGroup"></div>
